@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.ML;
 using SentimentAnalysisFunctionsApp;
 using SentimentAnalysisFunctionsApp.DataModels;
+using System;
 
 [assembly: FunctionsStartup(typeof(Startup))]
 namespace SentimentAnalysisFunctionsApp
@@ -13,8 +12,11 @@ namespace SentimentAnalysisFunctionsApp
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
+
+            string sentimentModelUri = Environment.GetEnvironmentVariable("SENTIMENT_MODEL_URI");
+
             builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                .FromFile("MLModels/sentiment_model.zip");
+                .FromUri(sentimentModelUri);
         }
     }
 }

@@ -42,6 +42,5 @@ namespace SentimentAnalysisFunctionsApp
             //Return Prediction
             return (ActionResult)new OkObjectResult(sentiment);
         }
-
     }
 }
