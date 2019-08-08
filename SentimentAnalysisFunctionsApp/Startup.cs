@@ -1,6 +1,4 @@
 ﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Hosting;
 using Microsoft.Extensions.ML;
 using SentimentAnalysisFunctionsApp;
 using SentimentAnalysisFunctionsApp.DataModels;
