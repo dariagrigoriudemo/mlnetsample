@@ -13,8 +13,11 @@ namespace SentimentAnalysisFunctionsApp
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
+
+            string sentimentModelUri = Environment.GetEnvironmentVariable("SENTIMENT_MODEL_URI");
+
             builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                .FromFile("MLModels/sentiment_model.zip");
+                .FromUri(sentimentModelUri);
         }
     }
 }

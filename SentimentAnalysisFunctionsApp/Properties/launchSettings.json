@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SentimentAnalysisFunctionsApp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SENTIMENT_MODEL_URI": "SAS"
+      }
+    }
+  }
+}
