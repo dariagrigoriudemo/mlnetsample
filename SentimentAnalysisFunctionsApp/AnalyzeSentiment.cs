@@ -27,7 +27,7 @@ namespace SentimentAnalysisFunctionsApp
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
         ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("C# HTTP trigger function processed a new request.");
 
             //Parse HTTP Request Body
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();

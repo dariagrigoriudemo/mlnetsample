@@ -3,7 +3,7 @@
     "SentimentAnalysisFunctionsApp": {
       "commandName": "Project",
       "environmentVariables": {
-        "SENTIMENT_MODEL_URI": "SAS"
+        "SENTIMENT_MODEL_URI": "https://testmlnetmodels.blob.core.windows.net/sentimentanalysis/sentiment_model.zip?sp=rl&st=2019-08-08T19:03:51Z&se=2020-08-08T13:51:00Z&sv=2018-03-28&sig=cVFuQry2bYM9UuxARXLWJWF4FVfyZNlE1KqHQ925gKo%3D&sr=b "
       }
     }
   }
