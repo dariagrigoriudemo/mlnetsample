@@ -37,7 +37,7 @@ namespace SentimentAnalysisFunctionsApp
             SentimentPrediction prediction = _predictionEnginePool.Predict(data);
 
             //Convert prediction to string
-            string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
+            string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive sentiment" : "Negative sentiment";
 
             //Return Prediction
             return (ActionResult)new OkObjectResult(sentiment);
